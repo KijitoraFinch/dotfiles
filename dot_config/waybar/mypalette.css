@@ -1,0 +1,17 @@
+@define-color light-green rgb(103, 255, 148);
+@define-color light-orange rgb(255, 215, 93);
+@define-color light-blue rgb(189, 236, 244);
+@define-color light-purple rgb(214, 185, 255);
+
+@define-color UI-gray #3b3d45;
+
+@define-color UI-gray-light #535563;
+
+
+@define-color transparented rgba(0, 0, 0, 0);
+
+
+@define-color kurari rgb(246, 202, 215);
+
+@define-color mild-yellow rgb(255, 255, 153);
+
