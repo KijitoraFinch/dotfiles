@@ -30,8 +30,8 @@ vim.o.smartcase = true
 vim.wo.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+vim.o.updatetime = 300
+vim.o.timeoutlen = 200
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -40,4 +40,10 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 vim.opt.winblend = 5 --フロートウィンドウなどを若干透明に
+
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+-- tabstop で設定した数の分の半角スペースが入力されます。
+vim.opt.expandtab = true
 -- vim: ts=2 sts=2 sw=2 et

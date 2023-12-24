@@ -101,24 +101,16 @@ local section = {
 
 local config = {
   layout = {
-    { type = "padding", val = 2 },
+    { type = "padding", val = function() return math.floor(vim.o.lines * 0.25) end },
     section.header,
     { type = "padding", val = 2 },
     section.buttons,
+    { type = "padding", val = 2 },
     section.footer,
   },
-  opts = {
-    margin = 5,
-    position = "center",
-  },
+  opts = {},
 }
 
 return {
-  button = button,
-  section = section,
   config = config,
-  -- theme config
-  leader = leader,
-  -- deprecated
-  opts = config,
 }

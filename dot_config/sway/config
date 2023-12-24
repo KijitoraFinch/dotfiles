@@ -1,8 +1,8 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+include /etc/sway/config.d/*.conf
+
+# exec some command before starting sway
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1;
+exec nm-applet --indicator
 
 ### Variables
 #
@@ -63,9 +63,7 @@ exec swayidle -w \
     input "type:keyboard" {
         xkb_options caps:ctrl_modifier
     }
-
-	exec fcitx5 -d
-#
+exec /home/nyagato/.bin/skk-startup &
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -118,7 +116,7 @@ exec swayidle -w \
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
-#
+#``
 # Shortcuts
     bindsym $mod+Shift+V exec clipman pick -t wofiy
 	bindsym $mod+Shift+P exec sway-interactive-screenshot
@@ -231,11 +229,13 @@ focus_follows_mouse no
 exec swaync
 
 # config for effects.
-corner_radius 9
-shadows disable
-shadows_on_csd disable
+#corner_radius 9
+#shadows disable
+#shadows_on_csd disable
+#NOTE: these config are for swayfx.
 
-default_dim_inactive 0
+
+#default_dim_inactive 0
 set $opacity 0.9
 
 
