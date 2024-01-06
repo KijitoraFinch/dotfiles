@@ -3,6 +3,7 @@ include /etc/sway/config.d/*.conf
 # exec some command before starting sway
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1;
 exec nm-applet --indicator
+exec_always ~/.config/sway/window-transparency.sh
 
 ### Variables
 #
@@ -25,7 +26,9 @@ set  $menu exec  wofi --show
 # Styles
 
 default_border pixel 2
-gaps inner 5
+gaps inner 3
+gaps outer 15
+default_border pixel 3
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available inFArch /usr/share/backgrounds/sway/)

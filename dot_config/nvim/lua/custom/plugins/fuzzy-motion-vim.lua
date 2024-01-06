@@ -1,1 +1,3 @@
-return { 'yuki-yano/fuzzy-motion.vim' }
+return {
+	'yuki-yano/fuzzy-motion.vim',
+}
